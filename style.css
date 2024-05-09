@@ -1,0 +1,371 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a:link {
+    color:#FCA311;
+    text-decoration: none;
+}
+
+/*mouse over link*/
+
+/*visited link*/
+a:visited{
+    color: #FCA311;
+}
+
+/*selected link*/
+a:active{
+    color:#FCA311;
+}
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(3, 6, 18, 0.7),rgba(3, 6, 18, 0.7)),url(https://thepointsguy.global.ssl.fastly.net/us/originals/2020/01/GettyImages-1140551641.jpg?width=1200);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    width: 150px;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+    font-size: 2svb;
+    font-family: 'Cooper black';
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #FCA311;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+
+}
+
+.text-box{
+    width: 90%;
+    color: #E5E5E5;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.text-box h1{
+    font-size: 62px;
+    font-family: 'Cooper black';
+}
+
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 20px;
+    color: #E5E5E5;
+    font-family: 'Cooper black';
+}
+
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color:#E5E5E5 ;
+    border: 1px solid #E5E5E5;
+    padding: 12px 34px;
+    font-size: 14px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.hero-btn:hover{
+    border: 1px solid #E5E5E5;
+    background: #14213D;
+    transition: 1s;
+}
+
+nav .fa{
+    display: none;
+}
+
+@media(max-width:700px){
+    .nav img{
+        width: 40px;
+    }
+    .text-box h1{
+        font-size: 28px;
+    }
+    .text-box p{
+        font-size: 16px ;
+    }
+    .hero-btn{
+        font-size: 12px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background-color: #14213D;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fa{
+        display: block;
+        color: white;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
+}
+
+/*-------travel----*/
+
+.travel{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.travel h1{
+    font-size: 7svb;
+    font-weight: 600;
+    font-family: 'Cooper black';
+    color: #FCA311;
+}
+
+.travel h3{
+    font-size: 4svb;
+    font-weight: 600;
+    font-family: 'Cooper black';
+    padding-top: 30px;
+    color: #FCA311;
+}
+.travel p{
+    color: #14213D;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+    font-family: 'Cooper black';
+    padding-bottom: 20px;
+}
+
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.travel-col{
+    flex-basis: 31%;
+    background-color: #E5E5E5;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px ;
+    box-sizing: border-box;
+}
+
+.travel-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+@media(max-width:700px){
+    .row{
+        flex-direction: column;
+    }
+    img{
+        width: 80%;
+    }
+}
+
+/*--------------destination--------------*/
+
+.destination{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.destination h1{
+    font-size: 7svb;
+    font-weight: 600;
+    font-family: 'Cooper black';
+    color: #FCA311;
+}
+
+.destination p{
+    color: #14213D;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+    font-family: 'Cooper black';
+    padding-bottom: 20px;
+}
+
+.destination-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.destination-col img{
+    width: 100%;
+    display: block;
+}
+
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.layer:hover{
+    background: rgba(1, 6, 63, 0.7);
+}
+
+.layer h3{
+    width: 100%;
+    font-size: 2svb;
+    font-weight: 500;
+    font-family: 'Cooper black';
+    padding-top: 6px;
+    color: #E5E5E5;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+    opacity: 0;
+}
+
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+
+.contact{
+    margin: 100px auto;
+    min-height: 20vh;
+    width: 80%;
+    background-image: linear-gradient(rgba(3, 6, 18, 0.7),rgba(3, 6, 18, 0.7)),url(https://www.goatsontheroad.com/wp-content/uploads/2018/11/places-to-visit-in-seoul-1100x618.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.contact h1{
+    color: #E5E5E5;
+    margin-bottom: 40px;
+    padding: 0;
+    font-family: 'Cooper black';
+}
+
+@media(max-width:700px){
+    .contact h1{
+        font-size: 24px;
+    }
+}
+
+/*about us*/
+
+.aboutus{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 20px;
+}
+.aboutus h1{
+    font-size: 7svb;
+    font-weight: 600;
+    font-family: 'Cooper black';
+    color: #FCA311;
+}
+
+.aboutus p{
+    color: #14213D;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+    font-family: 'Cooper black';
+    padding-bottom: 20px;
+}
+
+/*footer*/
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.footer p{
+    font-size: medium;
+    font-family: 'Cooper black';
+    color: #14213D;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.icons .fa{
+    color: #14213D;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px;
+
+}
+
+.fa-heart-o{
+    color: #14213D;
+
+}
+
+.footer a{
+    color: #14213D;
+}
